@@ -80,7 +80,8 @@ void	parse(t_mini *mini)
 
 	signal(SIGINT, &sig_int);
 	signal(SIGQUIT, &sig_quit);
-	mini->ret ? ft_putstr_fd("🤬 ", STDERR) : ft_putstr_fd("😎 ", STDERR);
+
+	// mini->ret ? ft_putstr_fd("🤬 ", STDERR) : ft_putstr_fd("😎 ", STDERR);
 	ft_putstr_fd("\033[0;36m\033[1mminishell ▸ \033[0m", STDERR);
 	if (get_next_line(0, &line) == -2 && (mini->exit = 1))
 		ft_putendl_fd("exit", STDERR);

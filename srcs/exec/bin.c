@@ -20,16 +20,16 @@ int			error_message(char *path)
 
 	fd = open(path, O_WRONLY);
 	folder = opendir(path);
-	ft_putstr_fd("minishell: ", STDERR);
+	ft_putstr_fd("minishell5: ", STDERR);
 	ft_putstr_fd(path, STDERR);
 	if (ft_strchr(path, '/') == NULL)
-		ft_putendl_fd(": command not found", STDERR);
+		ft_putendl_fd(": 1command not found", STDERR);
 	else if (fd == -1 && folder == NULL)
-		ft_putendl_fd(": No such file or directory", STDERR);
+		ft_putendl_fd(": 2No such file or directory", STDERR);
 	else if (fd == -1 && folder != NULL)
-		ft_putendl_fd(": is a directory", STDERR);
+		ft_putendl_fd(": 3is a directory", STDERR);
 	else if (fd != -1 && folder == NULL)
-		ft_putendl_fd(": Permission denied", STDERR);
+		ft_putendl_fd(": 4Permission denied", STDERR);
 	if (ft_strchr(path, '/') == NULL || (fd == -1 && folder == NULL))
 		ret = UNKNOWN_COMMAND;
 	else

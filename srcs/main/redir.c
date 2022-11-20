@@ -23,7 +23,7 @@ void	redir(t_mini *mini, t_token *token, int type)
 	{
 		ft_putstr_fd("minishell: ", STDERR);
 		ft_putstr_fd(token->str, STDERR);
-		ft_putendl_fd(": No such file or directory", STDERR);
+		ft_putendl_fd(":7 No such file or directory", STDERR);
 		mini->ret = 1;
 		mini->no_exec = 1;
 		return ;
@@ -39,7 +39,7 @@ void	input(t_mini *mini, t_token *token)
 	{
 		ft_putstr_fd("minishell: ", STDERR);
 		ft_putstr_fd(token->str, STDERR);
-		ft_putendl_fd(": No such file or directory", STDERR);
+		ft_putendl_fd(":8 No such file or directory", STDERR);
 		mini->ret = 1;
 		mini->no_exec = 1;
 		return ;

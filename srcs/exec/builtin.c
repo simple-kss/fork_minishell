@@ -29,9 +29,9 @@ int		is_builtin(char *command)
 	if (ft_strcmp(command, "exit") == 0)
 		return (1);
 	return (0);
-}`
+}
 
-int		exec_builtin(char **args, t_mini *mini)
+int		exec_builtin_cmd(char **args, t_mini *mini)
 {
 	int		result;
 

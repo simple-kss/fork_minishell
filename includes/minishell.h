@@ -109,8 +109,8 @@ char			*expansions(char *arg, t_env *env, int ret);
 ** EXEC
 */
 void			exec_cmd(t_mini *mini, t_token *token);
-int				exec_bin(char **args, t_env *env, t_mini *mini);
-int				exec_builtin(char **args, t_mini *mini);
+int				exec_executable_bin(char **args, t_env *env, t_mini *mini);
+int				exec_builtin_cmd(char **args, t_mini *mini);
 int				is_builtin(char	*command);
 
 /*

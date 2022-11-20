@@ -81,8 +81,9 @@ void	parse(t_mini *mini)
 	signal(SIGINT, &sig_int);
 	signal(SIGQUIT, &sig_quit);
 
-	// mini->ret ? ft_putstr_fd("🤬 ", STDERR) : ft_putstr_fd("😎 ", STDERR);
-	ft_putstr_fd("\033[0;36m\033[1mminishell ▸ \033[0m", STDERR);
+	// REMOVE: mini->ret ? ft_putstr_fd("🤬 ", STDERR) : ft_putstr_fd("😎 ", STDERR);
+	// REMOVE: ft_putstr_fd("\033[0;36m\033[1mminishell ▸ \033[0m", STDERR);
+	ft_putstr_fd("minishell > ", STDERR);
 	if (get_next_line(0, &line) == -2 && (mini->exit = 1))
 		ft_putendl_fd("exit", STDERR);
 	mini->ret = (g_sig.sigint == 1) ? g_sig.exit_status : mini->ret;

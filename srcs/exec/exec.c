@@ -58,9 +58,9 @@ void	exec_cmd(t_mini *mini, t_token *token)
 	if (cmd && ft_strcmp(cmd[0], "exit") == 0 && has_pipe(token) == 0)
 		mini_exit(mini, cmd);
 	else if (cmd && is_builtin(cmd[0]))
-		mini->ret = exec_builtin(cmd, mini);
+		mini->ret = exec_builtin_cmd(cmd, mini);
 	else if (cmd)
-		mini->ret = exec_bin(cmd, mini->env, mini);
+		mini->ret = exec_executable_bin(cmd, mini->env, mini);
 	free_tab(cmd);
 	ft_close(mini->pipin);
 	ft_close(mini->pipout);

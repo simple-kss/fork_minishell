@@ -98,7 +98,7 @@ char		*check_dir(char *bin, char *command)
 	return (path);
 }
 
-int			exec_bin(char **args, t_env *env, t_mini *mini)
+int			exec_executable_bin(char **args, t_env *env, t_mini *mini)
 {
 	int		i;
 	char	**bin;

@@ -60,6 +60,8 @@ void	minishell(t_mini *mini)
 		if (mini->parent == 0)
 		{
 			free_token(mini->start);
+			// ADD:
+			ft_printf("oliver: %d", mini->ret);
 			exit(mini->ret);
 		}
 		mini->no_exec = 0;
